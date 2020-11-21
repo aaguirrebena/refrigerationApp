@@ -59,7 +59,7 @@ function App() {
           </div>
         </div>
 
-        <div className="app__footer">INFORMACIÓN GENERAL</div>
+        <div className="app__footer">INFORMACIÓN DE {process}</div>
       </div>
     </div>
   );
