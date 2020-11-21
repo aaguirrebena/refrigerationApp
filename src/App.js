@@ -1,17 +1,22 @@
 import React, { useEffect, useState } from "react";
 
-import image from "./assets/mainImageWBG.png";
+// import image from "./assets/process_general.png";
 import "./App.css";
 import Cards from "./components/Cards/Cards";
 
 function App() {
   const object = [1, 2, 3, 4, 5, 6, 7, 8];
   const [process, setProcess] = useState("General");
+  const [image, setImage] = useState(
+    require("./assets/process_General.png").default
+  );
 
   function handleProcess(e, element) {
     e.preventDefault();
 
+    const image = require(`./assets/process_${element}.png`).default;
     setProcess(element);
+    setImage(image);
   }
 
   return (
@@ -40,14 +45,14 @@ function App() {
         </div>
 
         <div className="app__body">
-          <button className="app__left">
+          <div className="app__left">
             <img
               className="app__image"
               onClick={e => handleProcess(e, "General")}
               src={image}
               alt="image"
             />
-          </button>
+          </div>
           <div className="app__right">
             <div className="app__right--title">
               <h3>PROCESO</h3>

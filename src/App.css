@@ -33,10 +33,20 @@
 
 .app__button--unselected {
   background-color: lightgray;
+  transition-duration: 0.4s;
   border-radius: 5px;
   width: 10%;
   font-size: x-large;
   color: black;
+  cursor: pointer;
+}
+
+.app__button--unselected:active {
+  transform: translateY(4px);
+}
+
+.app__button--unselected:hover {
+  background-color: lightskyblue;
   cursor: pointer;
 }
 
@@ -49,9 +59,8 @@
   cursor: pointer;
 }
 
-.app__button--unselected:hover {
-  background-color: lightskyblue;
-  cursor: pointer;
+.app__button--selected:active {
+  transform: translateY(4px);
 }
 
 .app__body {
@@ -63,13 +72,16 @@
 .app__left {
   background-color: rgb(255, 192, 203, 0);
   flex: 0.33;
-  display: flex;
   border: 0;
-  cursor: pointer;
 }
 
 .app__image {
   display: block;
+  cursor: pointer;
+}
+
+.app__image:active {
+  transform: translateY(4px);
 }
 
 .app__right {
