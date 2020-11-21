@@ -15,27 +15,43 @@
   background-color: rgb(0, 0, 255, 0);
 }
 
-.app__process {
+.app__select {
   margin-top: 4px;
   background-color: rgb(255, 255, 224, 0);
+}
+
+.app__select--title {
+  margin-bottom: 8px;
+  font-weight: bold;
   font-size: large;
 }
 
-.app__process--title {
-  margin-bottom: 8px;
-}
-
-.app__process--option {
+.app__select--options {
   display: flex;
   justify-content: space-between;
 }
 
-.app__process--button {
+.app__button--unselected {
   background-color: lightgray;
   border-radius: 5px;
   width: 10%;
   font-size: x-large;
   color: black;
+  cursor: pointer;
+}
+
+.app__button--selected {
+  background-color: lightskyblue;
+  border-radius: 5px;
+  width: 10%;
+  font-size: x-large;
+  color: black;
+  cursor: pointer;
+}
+
+.app__button--unselected:hover {
+  background-color: lightskyblue;
+  cursor: pointer;
 }
 
 .app__body {
@@ -47,6 +63,12 @@
 .app__left {
   background-color: rgb(255, 192, 203, 0);
   flex: 0.33;
+  border: 0;
+  cursor: pointer;
+}
+
+.app__image {
+  display: block;
 }
 
 .app__right {

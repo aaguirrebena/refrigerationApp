@@ -21,13 +21,17 @@ function App() {
           <h1> Refrigeración líquida </h1>
         </div>
 
-        <div className="app__process">
-          <div className="app__process--title">Procesos</div>
-          <div className="app__process--option">
+        <div className="app__select">
+          <div className="app__select--title">Procesos</div>
+          <div className="app__select--options">
             {object.map(element => (
               <button
                 onClick={e => handleProcess(e, element)}
-                className="app__process--button"
+                className={
+                  process == element
+                    ? "app__button--selected"
+                    : "app__button--unselected"
+                }
               >
                 {element}
               </button>
@@ -36,13 +40,14 @@ function App() {
         </div>
 
         <div className="app__body">
-          <div className="app__left">
+          <button className="app__left">
             <img
+              className="app__image"
               onClick={e => handleProcess(e, "General")}
               src={image}
               alt="image"
             />
-          </div>
+          </button>
           <div className="app__right">
             <div className="app__right--title">
               <h3>PROCESO</h3>
