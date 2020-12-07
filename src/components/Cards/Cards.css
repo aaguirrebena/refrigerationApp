@@ -1,0 +1,14 @@
+.main {
+    padding: 8px;
+}
+
+.main__title{
+    color: black;
+    margin-bottom: 4px;
+}
+
+.main__info {
+    text-align: justify;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}

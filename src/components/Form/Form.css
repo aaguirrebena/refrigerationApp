@@ -1,0 +1,18 @@
+.main__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.main__ti {
+    display: flex;
+    margin-bottom: 6px;
+}
+
+.main__tf {
+    display: flex;
+    margin-bottom: 6px;
+}
+
+.main__submit {
+    margin-top: 10px;
+}

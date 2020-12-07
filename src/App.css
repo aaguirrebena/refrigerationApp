@@ -97,6 +97,7 @@
 }
 
 .app__right--equations {
+  padding: 8px;
   background-color: #dae8fc;
   border-style: solid;
   border-width: 2px;
