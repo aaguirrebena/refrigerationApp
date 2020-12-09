@@ -121,16 +121,16 @@ export const info = {
 };
 
 export const vars = {
-  p1: 7.849,
-  p2: 41.15,
-  p3: 1149.42,
-  p4: 26.74,
-  h1: 238.4,
-  h2: 303.9,
-  h3: 95,
-  h4: 78.72,
-  A: 0.000197,
-  A3: 0.000394,
-  cp: 1.012,
-  m: 16
+  'Densidad 1  ': '7.849 kg/m³',
+  'Densidad 2  ': '41.15 kg/m³',
+  'Densidad 3  ': '1149.42 kg/m³',
+  'Densidad 4  ': '26.74 kg/m³',
+  'hentalpia 1  ': '238.4 kJ/kg',
+  'hentalpia 2  ': '303.9 kJ/kg',
+  'hentalpia 3  ': ' 95 kJ/kg',
+  'hentalpia 4  ': '78.72 kJ/kg',
+  'Área Transversal': '0.000197 m^2',
+  // "Área transversal 3": 0.000394,
+  'Calor específico T ambiental': '1.012 kJ/kg*K',
+  'Flujo másico aire fuera de Evaporador': '16 m/s'
 };

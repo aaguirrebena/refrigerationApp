@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Equation.css';
+import { vars } from '../../utils';
 
 function Equation({ process, toShow, data }) {
   const mass_image = require(`../../assets/massBalance_${process}.jpeg`)
@@ -14,6 +15,11 @@ function Equation({ process, toShow, data }) {
           <div className="general__ti">Temperatura Inicial: {data.tI}</div>
           <div className="general__tf">Temperatura Deseada: {data.tW}</div>
           <div className="general__cop">Cop: {data.cop}</div>
+          {Object.keys(vars).map(key => (
+            <div>
+              {key}: {vars[key]}
+            </div>
+          ))}
         </div>
       ) : (
         <div>
