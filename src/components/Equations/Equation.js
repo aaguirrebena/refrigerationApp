@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Equation.css';
 
 function Equation({ process, toShow, data }) {
+  const image = require(`../../assets/massBalance_${process}.png`).default;
+
   return (
     <div className="main">
       {process === 'General' ? (
@@ -20,6 +22,9 @@ function Equation({ process, toShow, data }) {
           {process === 4 ? <div>Calor cedido: {data.qOut}</div> : <div></div>}
           {process === 8 ? <div>Calor Extraído: {data.qIn}</div> : <div></div>}
           <div>Balance de masa: {data.massBalance}</div>
+          <div>
+            <img className="mass_image" src={image} alt="mass" />
+          </div>
           <div>Balance de Energía: {data.energyBalance}</div>
         </div>
       )}
