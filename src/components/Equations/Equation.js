@@ -2,7 +2,10 @@ import React, { useEffect, useState } from 'react';
 import './Equation.css';
 
 function Equation({ process, toShow, data }) {
-  const image = require(`../../assets/massBalance_${process}.png`).default;
+  const mass_image = require(`../../assets/massBalance_${process}.jpeg`)
+    .default;
+  const energy_image = require(`../../assets/energyBalance_${process}.jpeg`)
+    .default;
 
   return (
     <div className="main">
@@ -23,9 +26,12 @@ function Equation({ process, toShow, data }) {
           {process === 8 ? <div>Calor Extraído: {data.qIn}</div> : <div></div>}
           <div>Balance de masa: {data.massBalance}</div>
           <div>
-            <img className="mass_image" src={image} alt="mass" />
+            <img className="mass_image" src={mass_image} alt="mass" />
           </div>
           <div>Balance de Energía: {data.energyBalance}</div>
+          <div>
+            <img className="energy_image" src={energy_image} alt="energy" />
+          </div>
         </div>
       )}
     </div>
