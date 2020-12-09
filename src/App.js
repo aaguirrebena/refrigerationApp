@@ -1,19 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 
-import "./App.css";
-import { fetchData } from "./api";
-import Cards from "./components/Cards/Cards";
-import Equation from "./components/Equations/Equation";
-import Result from "./components/Result/Result";
-import Form from "./components/Form/Form";
-import { info, vars } from "./utils";
+import './App.css';
+import { fetchData } from './api';
+import Cards from './components/Cards/Cards';
+import Equation from './components/Equations/Equation';
+import Result from './components/Result/Result';
+import Form from './components/Form/Form';
+import { info, vars } from './utils';
 
 function App() {
-  const [process, setProcess] = useState("General");
-  const [processInfo, setProcessInfo] = useState(info["0"].info);
-  const [processData, setProcessData] = useState(info["0"].data);
+  const [process, setProcess] = useState('General');
+  const [processInfo, setProcessInfo] = useState(info['0'].info);
+  const [processData, setProcessData] = useState(info['0'].data);
   const [image, setImage] = useState(
-    require("./assets/process_General.png").default
+    require('./assets/process_General.png').default
   );
   const [result, setResult] = useState(0);
   const [equation, setEquation] = useState(0);
@@ -24,12 +24,12 @@ function App() {
 
   function handleProcess(e, element) {
     e.preventDefault();
-    if (element.process === "reset") {
+    if (element.process === 'reset') {
       setinputTamb(0);
       setTf(0);
       setSearch(false);
-      const resetProcess = info["0"].process;
-      const resetInfo = info["0"].info;
+      const resetProcess = info['0'].process;
+      const resetInfo = info['0'].info;
       const image = require(`./assets/process_${resetProcess}.png`).default;
       setProcess(resetProcess);
       setProcessInfo(resetInfo);
@@ -46,7 +46,7 @@ function App() {
   async function handleFormM(ti, tf) {
     setinputTamb(ti);
     setTf(tf);
-    await handleResult();
+    // await handleResult();
     setSearch(true);
   }
 
@@ -71,8 +71,8 @@ function App() {
                 onClick={e => handleProcess(e, info[key])}
                 className={
                   process == info[key].process
-                    ? "app__button--selected"
-                    : "app__button--unselected"
+                    ? 'app__button--selected'
+                    : 'app__button--unselected'
                 }
               >
                 {info[key].process}
@@ -85,7 +85,7 @@ function App() {
           <div className="app__left">
             <img
               className="app__image"
-              onClick={e => handleProcess(e, info["0"])}
+              onClick={e => handleProcess(e, info['0'])}
               src={image}
               alt="image"
             />
@@ -97,7 +97,11 @@ function App() {
             <div className="app__right--equations">
               {search ? (
                 <div>
-                  <Equation process={ process } toShow={equation} data={processData} />
+                  <Equation
+                    process={process}
+                    toShow={equation}
+                    data={processData}
+                  />
                   {/* <Result toShow={result} /> */}
                 </div>
               ) : (

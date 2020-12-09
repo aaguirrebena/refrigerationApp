@@ -1,14 +1,14 @@
 import React from 'react';
-import MathJax from 'react-mathjax2';
+import './Equation.css';
 
 function Equation({ process, toShow, data }) {
   return (
-    <div>
+    <div className="main">
       {process === 'General' ? (
-        <div>
-          <div>Temperatura Inicial: {data.tI}</div>
-          <div>Temperatura Deseada: {data.tW}</div>
-          <div>Cop: {data.cop}</div>
+        <div className="main__general">
+          <div className="general__ti">Temperatura Inicial: {data.tI}</div>
+          <div className="general__tf">Temperatura Deseada: {data.tW}</div>
+          <div className="general__cop">Cop: {data.cop}</div>
         </div>
       ) : (
         <div>
