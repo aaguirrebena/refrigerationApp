@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import "./App.css";
-import { fetchData } from './api';
+import { fetchData, fetchAxiosData } from './api';
 import Cards from "./components/Cards/Cards";
 import Equation from './components/Equations/Equation';
 import Result from './components/Result/Result'
@@ -53,9 +53,9 @@ function App() {
 
   async function handleResult () {
 
-    const {equation, result} = await fetchData()
-    setEquation(equation)
-    setResult(result)
+    const {equation, result} = await fetchAxiosData()
+    // setEquation(equation)
+    // setResult(result)
 
   };
 
